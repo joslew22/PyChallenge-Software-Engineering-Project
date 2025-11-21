@@ -138,5 +138,38 @@
         "hint": ""
       }
     ]
+  },
+  {
+    "title": "Big Tech",
+    "description": "Test questionnaire about Big Tech Companies",
+    "questions": [
+      {
+        "question": "Which company owns Instagram?",
+        "options": [
+          "Meta",
+          "Amazon",
+          "TikTok",
+          "Tencent"
+        ],
+        "answer": "Meta",
+        "hint": "Verse"
+      },
+      {
+        "question": "What's the original name for Twitch.tv?",
+        "options": [
+          "Mixer",
+          "Justin.tv",
+          "NinjaGaming",
+          "PrimeGaming"
+        ],
+        "answer": "Justin.tv",
+        "hint": "Street Fighter Player"
+      }
+    ]
+  },
+  {
+    "title": "Big Tech",
+    "description": "Test questionnaire about Big Tech Companies",
+    "questions": []
   }
 ]

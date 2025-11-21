@@ -63,7 +63,7 @@ def logout():
     st.session_state.score = 0
     st.session_state.responses = {}
     st.session_state.quiz_completed = False
-    st.experimental_rerun()
+    st.rerun()
 
 if st.session_state.user:
     st.sidebar.success(f"Signed in as **{st.session_state.user}**")
@@ -79,7 +79,7 @@ else:
             if validate_user(li_user.strip(), li_pass):
                 st.session_state.user = li_user.strip()
                 st.session_state.message = f"Welcome back, {st.session_state.user}!"
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.session_state.message = "Invalid username or password."
 
@@ -233,7 +233,7 @@ elif menu == "Create Quiz":
                 "answer": "Option 1",
                 "hint": ""
             })
-            st.experimental_rerun()
+            st.rerun()
 
         if save_quiz:
             # collect question edits from dynamic UI below (we'll populate fields directly)
@@ -249,7 +249,7 @@ elif menu == "Create Quiz":
                 st.success("Quiz saved! It will appear in Play Quiz.")
                 # reset new_quiz
                 st.session_state.new_quiz = {"title": "", "description": "", "questions": []}
-                st.experimental_rerun()
+                st.rerun()
 
     # Dynamic question editors
     if st.session_state.new_quiz.get("questions"):
@@ -265,7 +265,7 @@ elif menu == "Create Quiz":
             hint = st.text_input(f"Hint {idx+1}", value=q.get("hint", ""), key=f"cq_hint_{idx}", on_change=lambda i=idx: st.session_state.new_quiz["questions"].__setitem__(i, {**st.session_state.new_quiz["questions"][i], "hint": st.session_state.get(f"cq_hint_{i}")}))
             if st.button(f"Remove Question {idx+1}", key=f"remove_{idx}"):
                 st.session_state.new_quiz["questions"].pop(idx)
-                st.experimental_rerun()
+                st.rerun()
 
 # Leaderboard
 elif menu == "Leaderboard":
@@ -306,7 +306,7 @@ elif menu == "Profile":
         conn.commit()
         conn.close()
         st.success("Your results were cleared.")
-        st.experimental_rerun()
+        st.rerun()
 
 # Footer
 st.markdown("---")

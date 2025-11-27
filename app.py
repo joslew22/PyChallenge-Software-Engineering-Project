@@ -157,6 +157,13 @@ elif menu == "Play Quiz":
     else:
         selected_title = st.selectbox("Choose a Quiz", quiz_titles)
         quiz = next((q for q in quizzes if q.get("title") == selected_title), quizzes[0])
+        
+        #Shuffle questions every time the quiz is opened
+        if "shuffled_questions" not in st.session_state:
+            import random
+            st.session_state.shuffled_questions = quiz["questions"].copy()
+            random.shuffle(st.session_state.shuffled_questions)
+        questions = st.session_state.shuffled_questions
 
         st.markdown(f"### {quiz.get('title')}")
         if quiz.get("description"):

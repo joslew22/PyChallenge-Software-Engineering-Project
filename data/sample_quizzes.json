@@ -1,0 +1,145 @@
+[
+  {
+    "title": "Python Basics",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "What is the output of print(2 ** 3)?",
+        "options": ["5", "6", "8", "9"],
+        "answer": "8",
+        "hint": "The ** operator means exponentiation."
+      },
+      {
+        "type": "mcq",
+        "question": "Which data type is mutable?",
+        "options": ["tuple", "list", "string", "int"],
+        "answer": "list",
+        "hint": "Mutable means you can change its content after creation."
+      },
+      {
+        "type": "mcq",
+        "question": "What keyword is used to define a function in Python?",
+        "options": ["func", "define", "def", "lambda"],
+        "answer": "def",
+        "hint": "It's a 3-letter keyword starting with 'd'."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the output of print(len('hello'))?",
+        "options": ["4", "5", "6", "None"],
+        "answer": "5",
+        "hint": "Count the characters."
+      }
+    ]
+  },
+
+  {
+    "title": "Data Structures",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Which data structure follows the FIFO principle?",
+        "options": ["Stack", "Queue", "Tree", "Graph"],
+        "answer": "Queue",
+        "hint": "FIFO = First In, First Out."
+      },
+      {
+        "type": "mcq",
+        "question": "Which operation removes the top element from a stack?",
+        "options": ["pop()", "push()", "peek()", "shift()"],
+        "answer": "pop()",
+        "hint": "Stacks use LIFO: Last In, First Out."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the time complexity of accessing an element in a Python list by index?",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        "answer": "O(1)",
+        "hint": "Lists are dynamic arrays in Python."
+      },
+      {
+        "type": "mcq",
+        "question": "Which Python structure is best for quick membership testing?",
+        "options": ["list", "tuple", "set", "string"],
+        "answer": "set",
+        "hint": "Hash-based lookup."
+      }
+    ]
+  },
+
+  {
+    "title": "Algorithms",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Which sorting algorithm has an average time complexity of O(n log n)?",
+        "options": ["Bubble Sort", "Quick Sort", "Insertion Sort", "Selection Sort"],
+        "answer": "Quick Sort",
+        "hint": "It uses a divide and conquer approach."
+      },
+      {
+        "type": "mcq",
+        "question": "Which algorithm is commonly used to find the shortest path in a weighted graph?",
+        "options": ["DFS", "BFS", "Dijkstra's Algorithm", "Merge Sort"],
+        "answer": "Dijkstra's Algorithm",
+        "hint": "Think about paths and weights."
+      },
+      {
+        "type": "mcq",
+        "question": "Which is NOT a stable sorting algorithm?",
+        "options": ["Merge Sort", "Bubble Sort", "Heap Sort", "Insertion Sort"],
+        "answer": "Heap Sort",
+        "hint": "Stable sorting maintains order of equal elements."
+      },
+      {
+        "type": "mcq",
+        "question": "What is binary search’s time complexity?",
+        "options": ["O(1)", "O(n)", "O(n log n)", "O(log n)"],
+        "answer": "O(log n)",
+        "hint": "Divide the array in half each step."
+      }
+    ]
+  },
+
+  {
+    "title": "C Programming",
+    "questions": [
+      {
+        "question": "Which symbol is used to start a comment in C?",
+        "options": ["//", "#", "/* */", "<!-- -->"],
+        "answer": "//",
+        "hint": "Same as C++"
+      },
+      {
+        "question": "What is the correct format specifier for printing an integer?",
+        "options": ["%d", "%i", "%f", "%int"],
+        "answer": "%d",
+        "hint": "Used with printf()"
+      }
+    ]
+  },
+
+  {
+    "title": "Big Tech Trivia",
+    "questions": [
+      {
+        "question": "Which company owns Instagram?",
+        "options": ["Meta", "Amazon", "TikTok", "Tencent"],
+        "answer": "Meta",
+        "hint": "Formerly Facebook."
+      },
+      {
+        "question": "What was the original name of Twitch?",
+        "options": ["Mixer", "Justin.tv", "Own3d", "Beam"],
+        "answer": "Justin.tv",
+        "hint": "Named after its creator."
+      },
+      {
+        "question": "Which company created the AWS cloud platform?",
+        "options": ["Amazon", "Microsoft", "Google", "IBM"],
+        "answer": "Amazon",
+        "hint": "Launched in 2006."
+      }
+    ]
+  }
+]

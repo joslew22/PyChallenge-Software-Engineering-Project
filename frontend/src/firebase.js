@@ -3,20 +3,27 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// ✅ Your Firebase project configuration
+// Load Firebase config from environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyC1hgEx19Z95qcEzVX1_kaAHtagWSOfU_I",
-  authDomain: "pychallenge-d72fd.firebaseapp.com",
-  projectId: "pychallenge-d72fd",
-  storageBucket: "pychallenge-d72fd.appspot.com",
-  messagingSenderId: "897439771408",
-  appId: "1:897439771408:web:331e22df46f85c769b5395",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// ✅ Initialize Firebase
+// Validate that all required env vars are loaded
+if (!firebaseConfig.apiKey || !firebaseConfig.authDomain || !firebaseConfig.projectId) {
+  console.error("❌ Firebase config is missing! Check your .env file.");
+  console.error("Required vars: VITE_FIREBASE_API_KEY, VITE_FIREBASE_AUTH_DOMAIN, VITE_FIREBASE_PROJECT_ID");
+  console.warn("Current config:", firebaseConfig);
+}
+
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// ✅ Named exports that other files import
+// Export auth instances for use in AuthContext and other components
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 export const db = getFirestore(app);

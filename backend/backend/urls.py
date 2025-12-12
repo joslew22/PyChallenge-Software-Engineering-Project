@@ -22,10 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('quizzes.urls')),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
-    # Django allauth and dj-rest-auth
-    path('api/auth/', include('dj_rest_auth.urls')),
-    path('api/auth/registration/', include('dj_rest_auth.registration.urls')),
-    path('accounts/', include('allauth.urls')),  # Required for social auth redirects
 ]
 

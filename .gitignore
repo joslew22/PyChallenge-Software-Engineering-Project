@@ -1,6 +1,3 @@
-# Exclude React frontend
-frontend/
-
 # Python
 __pycache__/
 *.py[cod]

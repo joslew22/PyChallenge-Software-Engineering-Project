@@ -11,5 +11,5 @@ python manage.py collectstatic --no-input
 # Run migrations
 python manage.py migrate
 
-# Optional: Load sample data (comment out after first deployment)
-# python migrate_quizzes.py
+# Load sample data on first deployment (only runs if no users exist)
+python migrate_quizzes.py || echo "Sample data already loaded or script failed"
